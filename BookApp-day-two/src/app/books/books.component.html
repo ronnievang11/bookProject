@@ -1,48 +1,194 @@
 <p>
-    <button (click)="goToCreate()">Create a book</button>
+  <button (click)="goToCreate()">Create a book</button>
 </p>
 
-
+<!--MOST POPULAR-->
 <section class="items">
-  <h1 class = "most-popular">MOST POPULAR</h1>
+  <h1 class="most-popular">MOST POPULAR</h1>
   <section class="regular1-slider">
     <ul>
-      <div class="book-card" *ngFor="let book of books | slice:0:4" [routerLink]="['book',book._id] ">
-        <P>{{book._id}}</P>
-        <P>{{book.title}}</P>
-        <P>{{book.author}}</P>
-        <P>{{book.read}}</P>
-        <button (click)="deleteBook(book._id)">X</button>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>By: {{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <!--to display different book for each book details, copy the div book-card and section book details and paste it 3 more time with slice 0:1 etc-->
+      <div class="book-card" *ngFor="let book of books | slice:1:2" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book2.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
       </div>
     </ul>
   </section>
 
+<!--RECENTLY VIEWED-->
   <h1 class="recently-viewed">RECENTLY VIEWED</h1>
   <section class="regular2-slider">
     <ul>
-      <div class="book-card" *ngFor="let book of books | slice:0:4" [routerLink]="['book',book._id] ">
-        <P>{{book._id}}</P>
-        <P>{{book.title}}</P>
-        <P>{{book.author}}</P>
-        <P>{{book.read}}</P>
-        <button (click)="deleteBook(book._id)">X</button>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+
+    
+  </section>
+
+<!--BOOK CATEGORIES-->
+  <h1 class="book-categories">BOOK CATEGORIES</h1>
+  <section class="regular3-slider">
+   <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
+      </div>
+    </ul>
+    <ul>
+      <div class="book-card" *ngFor="let book of books | slice:0:1" [routerLink]="['book',book._id] ">
+        <section class="book-image">
+          <img src="../assets/img/book1.jpg" alt="book1">
+        </section>
+
+        <section class="book-details">
+          <P>{{book.title}}</P>
+          <P>{{book.author}}</P>
+          <button (click)="deleteBook(book._id)">X</button>
+        </section>
+
       </div>
     </ul>
   </section>
 
-  <h1 class = "book-categories">BOOK CATEGORIES</h1>
-  <section class="regular3-slider">
-    <ul>
-      <div class="book-card" *ngFor="let book of books | slice:0:4" [routerLink]="['book',book._id] ">
-        <P>{{book._id}}</P>
-        <P>{{book.title}}</P>
-        <P>{{book.author}}</P>
-        <P>{{book.read}}</P>
-        <button (click)="deleteBook(book._id)">X</button>
-      </div>
-    </ul>
-  </section>
- 
 </section>
 <!-- <section class="regular1-slider">
 <div class="book-card" *ngFor="let book of books" [routerLink]="['book',book._id]">
